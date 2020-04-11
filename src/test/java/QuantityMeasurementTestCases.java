@@ -27,14 +27,14 @@ public class QuantityMeasurementTestCases {
     }
 
     @Test
-    public void givenSameRef_ShouldReturnTrue() {
+    public void givenSameFeetRef_ShouldReturnTrue() {
         Length length = new Length(0, QuantityMeasurement.Unit.FEET);
         boolean temp = quantityMeasurement.compare(length, length);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void givenSameType_ShouldReturnTrue() {
+    public void givenSameFeetType_ShouldReturnTrue() {
         Length lengthOne = new Length(0, QuantityMeasurement.Unit.FEET);
         Length lengthTwo = new Length(0, QuantityMeasurement.Unit.FEET);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
@@ -42,7 +42,7 @@ public class QuantityMeasurementTestCases {
     }
 
     @Test
-    public void givenSameValue_ShouldReturnTrue() {
+    public void givenSameFeetValue_ShouldReturnTrue() {
         Length lengthOne = new Length(5, QuantityMeasurement.Unit.FEET);
         Length lengthTwo = new Length(5, QuantityMeasurement.Unit.FEET);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
@@ -50,7 +50,7 @@ public class QuantityMeasurementTestCases {
     }
 
     @Test
-    public void givenDifferentValue_ShouldReturnTrue() {
+    public void givenFeetDifferentValue_ShouldReturnTrue() {
         Length lengthOne = new Length(4, QuantityMeasurement.Unit.FEET);
         Length lengthTwo = new Length(5, QuantityMeasurement.Unit.FEET);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
@@ -73,5 +73,11 @@ public class QuantityMeasurementTestCases {
         Assert.assertFalse(temp);
     }
 
+    @Test
+    public void givenSameInchRef_ShouldReturnTrue() {
+        Length length = new Length(0, QuantityMeasurement.Unit.INCH);
+        boolean temp = quantityMeasurement.compare(length, length);
+        Assert.assertTrue(temp);
+    }
 
 }
