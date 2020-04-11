@@ -17,4 +17,12 @@ public class QuantityMeasurementTestCases {
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
+
+    @Test
+    public void givenLengthInFeetAndNull_ShouldReturnFalse() {
+        Length lengthOne = new Length(0, QuantityMeasurement.Unit.FEET);
+        Length lengthTwo = null;
+        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
+        Assert.assertFalse(temp);
+    }
 }
