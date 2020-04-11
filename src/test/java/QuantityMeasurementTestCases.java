@@ -48,4 +48,12 @@ public class QuantityMeasurementTestCases {
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
+
+    @Test
+    public void givenDifferentValue_ShouldReturnTrue() {
+        Length lengthOne = new Length(4, QuantityMeasurement.Unit.FEET);
+        Length lengthTwo = new Length(5, QuantityMeasurement.Unit.FEET);
+        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
+        Assert.assertFalse(temp);
+    }
 }
