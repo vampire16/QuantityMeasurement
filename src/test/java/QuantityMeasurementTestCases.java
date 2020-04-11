@@ -25,4 +25,11 @@ public class QuantityMeasurementTestCases {
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertFalse(temp);
     }
+
+    @Test
+    public void givenSameRef_ShouldReturnTrue() {
+        Length length = new Length(0, QuantityMeasurement.Unit.FEET);
+        boolean temp = quantityMeasurement.compare(length, length);
+        Assert.assertTrue(temp);
+    }
 }
