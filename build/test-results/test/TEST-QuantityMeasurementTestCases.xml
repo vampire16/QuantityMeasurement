@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="QuantityMeasurementTestCases" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-11T08:55:22" hostname="DESKTOP-7UGSU5P" time="0.006">
+<testsuite name="QuantityMeasurementTestCases" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-04-11T09:08:37" hostname="DESKTOP-7UGSU5P" time="0.008">
   <properties/>
   <testcase name="givenSameRef_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.005"/>
   <testcase name="givenLengthInFeet_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
   <testcase name="givenLengthInFeetAndNull_ShouldReturnFalse" classname="QuantityMeasurementTestCases" time="0.0"/>
+  <testcase name="givenSameType_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
