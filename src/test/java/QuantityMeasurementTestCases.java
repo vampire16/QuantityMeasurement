@@ -104,4 +104,11 @@ public class QuantityMeasurementTestCases {
         Assert.assertFalse(temp);
     }
 
+    @Test
+    public void givenFeetAndInch_ShouldReturnTrue() {
+        Length lengthOne = new Length(1, QuantityMeasurement.Unit.FEET);
+        Length lengthTwo = new Length(12, QuantityMeasurement.Unit.INCH);
+        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
+        Assert.assertTrue(temp);
+    }
 }
