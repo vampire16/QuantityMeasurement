@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="QuantityMeasurementTestCases" tests="1" skipped="1" failures="0" errors="0" timestamp="2020-04-11T08:05:24" hostname="DESKTOP-7UGSU5P" time="315.371">
+<testsuite name="QuantityMeasurementTestCases" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-04-11T08:32:38" hostname="DESKTOP-7UGSU5P" time="0.006">
   <properties/>
-  <testcase name="givenLengthInFeet_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="315.371">
-    <skipped/>
-  </testcase>
+  <testcase name="givenLengthInFeet_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.005"/>
+  <testcase name="givenLengthInFeetAndNull_ShouldReturnFalse" classname="QuantityMeasurementTestCases" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
