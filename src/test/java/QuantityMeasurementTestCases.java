@@ -56,4 +56,13 @@ public class QuantityMeasurementTestCases {
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertFalse(temp);
     }
+
+    @Test
+    public void givenLengthInInch_ShouldReturnTrue() {
+        Length lengthOne = new Length(0, QuantityMeasurement.Unit.INCH);
+        Length lengthTwo = new Length(0, QuantityMeasurement.Unit.INCH);
+        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
+        Assert.assertTrue(temp);
+    }
+
 }
