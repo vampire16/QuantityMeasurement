@@ -32,4 +32,12 @@ public class QuantityMeasurementTestCases {
         boolean temp = quantityMeasurement.compare(length, length);
         Assert.assertTrue(temp);
     }
+
+    @Test
+    public void givenSameType_ShouldReturnTrue() {
+        Length lengthOne = new Length(0, QuantityMeasurement.Unit.FEET);
+        Length lengthTwo = new Length(0, QuantityMeasurement.Unit.FEET);
+        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
+        Assert.assertTrue(temp);
+    }
 }
