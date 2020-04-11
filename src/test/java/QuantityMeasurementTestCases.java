@@ -80,4 +80,12 @@ public class QuantityMeasurementTestCases {
         Assert.assertTrue(temp);
     }
 
+    @Test
+    public void givenSameInchType_ShouldReturnTrue() {
+        Length lengthOne = new Length(0, QuantityMeasurement.Unit.INCH);
+        Length lengthTwo = new Length(0, QuantityMeasurement.Unit.INCH);
+        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
+        Assert.assertTrue(temp);
+    }
+
 }
