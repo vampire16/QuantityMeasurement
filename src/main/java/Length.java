@@ -7,7 +7,7 @@ public class Length {
 
     public Length(int length, QuantityMeasurement.Unit unit) {
         if(unit == QuantityMeasurement.Unit.FEET){
-            this.length = 12*length;
+            this.length = 12 * length;
             this.unit = QuantityMeasurement.Unit.INCH;
         } else {
             this.length = length;
