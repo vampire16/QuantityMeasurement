@@ -1,7 +1,8 @@
 public enum Unit {
     FEET(12),
     INCH(1),
-    YARD(36);
+    YARD(36),
+    CENTIMETER(0.4);
 
     private final double length;
 
