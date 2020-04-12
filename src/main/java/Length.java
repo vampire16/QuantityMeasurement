@@ -2,17 +2,12 @@ import java.util.Objects;
 
 public class Length {
 
-    private int length;
-    private QuantityMeasurement.Unit unit;
+    private double length;
+    private Unit unit;
 
-    public Length(int length, QuantityMeasurement.Unit unit) {
-        if(unit == QuantityMeasurement.Unit.FEET){
-            this.length = 12 * length;
-            this.unit = QuantityMeasurement.Unit.INCH;
-        } else {
-            this.length = length;
-            this.unit = unit;
-        }
+    public Length(double length, Unit unit) {
+        this.length = length * unit.getValue();
+        this.unit = unit;
     }
 
     @Override
@@ -20,8 +15,7 @@ public class Length {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Length length1 = (Length) o;
-        return length == length1.length &&
-                unit == length1.unit;
+        return Double.compare(length1.length, length) == 0;
     }
 
     @Override
