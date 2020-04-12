@@ -159,4 +159,12 @@ public class QuantityMeasurementTestCases {
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
+
+    @Test
+    public void given2InchAnd5Centimeter_ShouldReturnTrue() {
+        Length lengthOne = new Length(2, Unit.INCH);
+        Length lengthTwo = new Length(5, Unit.CENTIMETER);
+        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
+        Assert.assertTrue(temp);
+    }
 }
