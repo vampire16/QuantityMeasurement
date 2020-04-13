@@ -6,11 +6,11 @@ public class Length {
     private Unit unit;
 
     public Length(double length, Unit unit) {
-        this.length = length * unit.getValue();
+        this.length = length * unit.getLength();
         this.unit = unit;
     }
 
-    public double getValue() { return length; }
+    public double getLength() { return length; }
 
     @Override
     public boolean equals(Object o) {
