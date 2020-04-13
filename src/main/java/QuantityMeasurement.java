@@ -7,4 +7,8 @@ public class QuantityMeasurement {
     public boolean compare(Length lengthOne, Length lengthTwo){
         return lengthOne.equals(lengthTwo);
     }
+
+    public double addition(Length lengthOne, Length lengthTwo) {
+        return lengthOne.getLength()+lengthTwo.getLength();
+    }
 }
