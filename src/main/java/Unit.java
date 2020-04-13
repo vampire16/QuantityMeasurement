@@ -8,5 +8,5 @@ public enum Unit {
 
     Unit(double length) { this.length = length; }
 
-    public double getValue() { return length; }
+    public double getLength() { return length; }
 }
