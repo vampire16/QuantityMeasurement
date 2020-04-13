@@ -223,4 +223,21 @@ public class QuantityMeasurementTestCases {
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(1001,temp,0);
     }
+
+    @Test
+    public void givenKilogramAndGram_ShouldReturnResult() {
+        Length lengthOne = new Length(1, Unit.KILOGRAM);
+        Length lengthTwo = new Length(1000, Unit.GRAM);
+        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
+        Assert.assertTrue(temp);
+    }
+
+    @Test
+    public void givenFahrenheitAndCelcius_ShouldReturnTrue() {
+        Length lengthOne = new Length(2.12, Unit.FAHRENHEIT);
+        Length lengthTwo = new Length(1, Unit.CELCIUS);
+        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
+        Assert.assertTrue(temp);
+    }
+
 }
