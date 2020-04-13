@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="QuantityMeasurementTestCases" tests="26" skipped="0" failures="0" errors="0" timestamp="2020-04-13T01:50:53" hostname="DESKTOP-7UGSU5P" time="0.069">
+<testsuite name="QuantityMeasurementTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-13T01:58:51" hostname="DESKTOP-7UGSU5P" time="0.008">
   <properties/>
-  <testcase name="given1YardAnd3Feet_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.003"/>
-  <testcase name="given36InchAnd1Yard_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenGallonAndLiter_WhenAdded_ShouldReturnResult" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenLengthInInch_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenInchAndInch_WhenAdded_ShouldReturnResult" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenSameFeetValue_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.001"/>
-  <testcase name="givenLengthInInchAndNull_ShouldReturnFalse" classname="QuantityMeasurementTestCases" time="0.002"/>
-  <testcase name="given1FeetAnd1Yard_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.002"/>
-  <testcase name="given3FeetAnd1Yard_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.004"/>
-  <testcase name="givenFeetAndInch_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.001"/>
-  <testcase name="given1YardAnd36Inch_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenSameFeetType_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenSameInchValue_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenInchAndCentimeter_WhenAdded_ShouldReturnResult" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenSameInchRef_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenLengthInFeet_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.001"/>
-  <testcase name="givenSameFeetRef_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.001"/>
-  <testcase name="givenFeetAndFeet_WhenAdded_ShouldReturnResult" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="given1InchAnd1Yard_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenFeetAndInch_WhenAdded_ShouldReturnResult" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenInchDifferentValue_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenFeetDifferentValue_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.001"/>
-  <testcase name="given2InchAnd5Centimeter_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenLengthInFeetAndNull_ShouldReturnFalse" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenSameInchType_ShouldReturnTrue" classname="QuantityMeasurementTestCases" time="0.0"/>
-  <testcase name="givenLiterAndMiliLiter_WhenAdded_ShouldReturnResult" classname="QuantityMeasurementTestCases" time="0.001"/>
+  <testcase name="givenTonneAndGram_WhenAdded_ShouldReturnResult" classname="QuantityMeasurementTestCases" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
