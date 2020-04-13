@@ -167,4 +167,12 @@ public class QuantityMeasurementTestCases {
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
+
+    @Test
+    public void givenInchAndInch_WhenAdded_ShouldReturnResult() {
+        Length lengthOne = new Length(2, Unit.INCH);
+        Length lengthTwo = new Length(2, Unit.INCH);
+        double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
+        Assert.assertEquals(4,temp,0);
+    }
 }
