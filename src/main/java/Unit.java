@@ -8,7 +8,9 @@ public enum Unit {
     GALLON(3.78),
     GRAM(0.001),
     KILOGRAM(1),
-    TONNE(1000);
+    TONNE(1000),
+    FAHRENHEIT(1),
+    CELCIUS(2.12);
 
     private final double length;
 
