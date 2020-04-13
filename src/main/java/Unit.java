@@ -5,7 +5,10 @@ public enum Unit {
     CENTIMETER(0.4),
     LITRE(1),
     MILILITER(0.001),
-    GALLON(3.78);
+    GALLON(3.78),
+    GRAM(0.001),
+    KILOGRAM(1),
+    TONNE(1000);
 
     private final double length;
 
