@@ -175,4 +175,28 @@ public class QuantityMeasurementTestCases {
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(4,temp,0);
     }
+
+    @Test
+    public void givenFeetAndInch_WhenAdded_ShouldReturnResult() {
+        Length lengthOne = new Length(1, Unit.FEET);
+        Length lengthTwo = new Length(2, Unit.INCH);
+        double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
+        Assert.assertEquals(14,temp,0);
+    }
+
+    @Test
+    public void givenFeetAndFeet_WhenAdded_ShouldReturnResult() {
+        Length lengthOne = new Length(1, Unit.FEET);
+        Length lengthTwo = new Length(1, Unit.FEET);
+        double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
+        Assert.assertEquals(24,temp,0);
+    }
+
+    @Test
+    public void givenInchAndCentimeter_WhenAdded_ShouldReturnResult() {
+        Length lengthOne = new Length(2, Unit.INCH);
+        Length lengthTwo = new Length(2.5, Unit.CENTIMETER);
+        double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
+        Assert.assertEquals(3,temp,0);
+    }
 }
