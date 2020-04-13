@@ -2,7 +2,10 @@ public enum Unit {
     FEET(12),
     INCH(1),
     YARD(36),
-    CENTIMETER(0.4);
+    CENTIMETER(0.4),
+    LITRE(1),
+    MILILITER(0.001),
+    GALLON(3.78);
 
     private final double length;
 
