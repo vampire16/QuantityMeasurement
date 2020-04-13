@@ -215,4 +215,12 @@ public class QuantityMeasurementTestCases {
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(2,temp,0);
     }
+
+    @Test
+    public void givenTonneAndGram_WhenAdded_ShouldReturnResult() {
+        Length lengthOne = new Length(1, Unit.TONNE);
+        Length lengthTwo = new Length(1000, Unit.GRAM);
+        double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
+        Assert.assertEquals(1001,temp,0);
+    }
 }
