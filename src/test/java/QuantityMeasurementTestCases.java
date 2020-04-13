@@ -199,4 +199,20 @@ public class QuantityMeasurementTestCases {
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(3,temp,0);
     }
+
+    @Test
+    public void givenGallonAndLiter_WhenAdded_ShouldReturnResult() {
+        Length lengthOne = new Length(1, Unit.GALLON);
+        Length lengthTwo = new Length(3.78, Unit.LITRE);
+        double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
+        Assert.assertEquals(7.56,temp,0);
+    }
+
+    @Test
+    public void givenLiterAndMiliLiter_WhenAdded_ShouldReturnResult() {
+        Length lengthOne = new Length(1, Unit.LITRE);
+        Length lengthTwo = new Length(1000, Unit.MILILITER);
+        double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
+        Assert.assertEquals(2,temp,0);
+    }
 }
