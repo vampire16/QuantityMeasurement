@@ -1,7 +1,7 @@
 public class Convertor {
 
-    private double value;
     public EntityType entityType;
+    private double value;
 
     public Convertor(double value, Entity entity) {
         if (entity.entityType == EntityType.TEMPERATURE)
@@ -11,7 +11,9 @@ public class Convertor {
         this.entityType = entity.entityType;
     }
 
-    public double getValue() { return value; }
+    public double getValue() {
+        return value;
+    }
 
     @Override
     public boolean equals(Object o) {
