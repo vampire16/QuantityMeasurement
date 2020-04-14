@@ -11,233 +11,314 @@ public class QuantityMeasurementTestCases {
     }
 
     @Test
-    public void givenLengthInFeet_ShouldReturnTrue() {
-        Length lengthOne = new Length(0, Unit.FEET);
-        Length lengthTwo = new Length(0, Unit.FEET);
+    public void givenLengthInFeet_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(0, Entity.FEET);
+        Convertor lengthTwo = new Convertor(0, Entity.FEET);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
     public void givenLengthInFeetAndNull_ShouldReturnFalse() {
-        Length lengthOne = new Length(0, Unit.FEET);
-        Length lengthTwo = null;
-        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
-        Assert.assertFalse(temp);
+        Convertor lengthOne = new Convertor(0, Entity.FEET);
+        Convertor lengthTwo = null;
+        try {
+            quantityMeasurement.compare(lengthOne, lengthTwo);
+        } catch (QuantityMeasurementException e) {
+            Assert.assertEquals(e.type,QuantityMeasurementException.Exception.NULL_EXCEPTION);
+        }
+
     }
 
     @Test
-    public void givenSameFeetRef_ShouldReturnTrue() {
-        Length length = new Length(0, Unit.FEET);
+    public void givenSameFeetRef_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor length = new Convertor(0, Entity.FEET);
         boolean temp = quantityMeasurement.compare(length, length);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void givenSameFeetType_ShouldReturnTrue() {
-        Length lengthOne = new Length(0, Unit.FEET);
-        Length lengthTwo = new Length(0, Unit.FEET);
+    public void givenSameFeetType_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(0, Entity.FEET);
+        Convertor lengthTwo = new Convertor(0, Entity.FEET);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void givenSameFeetValue_ShouldReturnTrue() {
-        Length lengthOne = new Length(5, Unit.FEET);
-        Length lengthTwo = new Length(5, Unit.FEET);
+    public void givenSameFeetValue_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(5, Entity.FEET);
+        Convertor lengthTwo = new Convertor(5, Entity.FEET);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void givenFeetDifferentValue_ShouldReturnTrue() {
-        Length lengthOne = new Length(4, Unit.FEET);
-        Length lengthTwo = new Length(5, Unit.FEET);
+    public void givenFeetDifferentValue_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(4, Entity.FEET);
+        Convertor lengthTwo = new Convertor(5, Entity.FEET);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertFalse(temp);
     }
 
     @Test
-    public void givenLengthInInch_ShouldReturnTrue() {
-        Length lengthOne = new Length(0, Unit.INCH);
-        Length lengthTwo = new Length(0, Unit.INCH);
+    public void givenLengthInInch_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(0, Entity.INCH);
+        Convertor lengthTwo = new Convertor(0, Entity.INCH);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
     public void givenLengthInInchAndNull_ShouldReturnFalse() {
-        Length lengthOne = new Length(0, Unit.INCH);
-        Length lengthTwo = null;
-        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
-        Assert.assertFalse(temp);
+        Convertor lengthOne = new Convertor(0, Entity.INCH);
+        Convertor lengthTwo = null;
+        try {
+            quantityMeasurement.compare(lengthOne, lengthTwo);
+        } catch (QuantityMeasurementException e) {
+            Assert.assertEquals(e.type,QuantityMeasurementException.Exception.NULL_EXCEPTION);
+        }
     }
 
     @Test
-    public void givenSameInchRef_ShouldReturnTrue() {
-        Length length = new Length(0, Unit.INCH);
+    public void givenSameInchRef_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor length = new Convertor(0, Entity.INCH);
         boolean temp = quantityMeasurement.compare(length, length);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void givenSameInchType_ShouldReturnTrue() {
-        Length lengthOne = new Length(0, Unit.INCH);
-        Length lengthTwo = new Length(0, Unit.INCH);
+    public void givenSameInchType_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(0, Entity.INCH);
+        Convertor lengthTwo = new Convertor(0, Entity.INCH);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void givenSameInchValue_ShouldReturnTrue() {
-        Length lengthOne = new Length(5, Unit.INCH);
-        Length lengthTwo = new Length(5, Unit.INCH);
+    public void givenSameInchValue_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(5, Entity.INCH);
+        Convertor lengthTwo = new Convertor(5, Entity.INCH);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void givenInchDifferentValue_ShouldReturnTrue() {
-        Length lengthOne = new Length(4, Unit.INCH);
-        Length lengthTwo = new Length(5, Unit.INCH);
+    public void givenInchDifferentValue_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(4, Entity.INCH);
+        Convertor lengthTwo = new Convertor(5, Entity.INCH);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertFalse(temp);
     }
 
     @Test
-    public void givenFeetAndInch_ShouldReturnTrue() {
-        Length lengthOne = new Length(1, Unit.FEET);
-        Length lengthTwo = new Length(12, Unit.INCH);
+    public void givenFeetAndInch_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.FEET);
+        Convertor lengthTwo = new Convertor(12, Entity.INCH);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void given3FeetAnd1Yard_ShouldReturnTrue() {
-        Length lengthOne = new Length(3, Unit.FEET);
-        Length lengthTwo = new Length(1, Unit.YARD);
+    public void given3FeetAnd1Yard_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(3, Entity.FEET);
+        Convertor lengthTwo = new Convertor(1, Entity.YARD);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void given1FeetAnd1Yard_ShouldReturnTrue() {
-        Length lengthOne = new Length(1, Unit.FEET);
-        Length lengthTwo = new Length(1, Unit.YARD);
+    public void given1FeetAnd1Yard_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.FEET);
+        Convertor lengthTwo = new Convertor(1, Entity.YARD);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertFalse(temp);
     }
 
     @Test
-    public void given1InchAnd1Yard_ShouldReturnTrue() {
-        Length lengthOne = new Length(1, Unit.INCH);
-        Length lengthTwo = new Length(1, Unit.YARD);
+    public void given1InchAnd1Yard_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.INCH);
+        Convertor lengthTwo = new Convertor(1, Entity.YARD);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertFalse(temp);
     }
 
     @Test
-    public void given1YardAnd36Inch_ShouldReturnTrue() {
-        Length lengthOne = new Length(1, Unit.YARD);
-        Length lengthTwo = new Length(36, Unit.INCH);
+    public void given1YardAnd36Inch_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.YARD);
+        Convertor lengthTwo = new Convertor(36, Entity.INCH);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void given36InchAnd1Yard_ShouldReturnTrue() {
-        Length lengthOne = new Length(36, Unit.INCH);
-        Length lengthTwo = new Length(1, Unit.YARD);
+    public void given36InchAnd1Yard_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(36, Entity.INCH);
+        Convertor lengthTwo = new Convertor(1, Entity.YARD);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void given1YardAnd3Feet_ShouldReturnTrue() {
-        Length lengthOne = new Length(1, Unit.YARD);
-        Length lengthTwo = new Length(3, Unit.FEET);
+    public void given1YardAnd3Feet_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.YARD);
+        Convertor lengthTwo = new Convertor(3, Entity.FEET);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void given2InchAnd5Centimeter_ShouldReturnTrue() {
-        Length lengthOne = new Length(2, Unit.INCH);
-        Length lengthTwo = new Length(5, Unit.CENTIMETER);
+    public void given2InchAnd5Centimeter_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(2, Entity.INCH);
+        Convertor lengthTwo = new Convertor(5, Entity.CENTIMETER);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void givenInchAndInch_WhenAdded_ShouldReturnResult() {
-        Length lengthOne = new Length(2, Unit.INCH);
-        Length lengthTwo = new Length(2, Unit.INCH);
+    public void givenInchAndInch_WhenAdded_ShouldReturnResult() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(2, Entity.INCH);
+        Convertor lengthTwo = new Convertor(2, Entity.INCH);
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(4,temp,0);
     }
 
     @Test
-    public void givenFeetAndInch_WhenAdded_ShouldReturnResult() {
-        Length lengthOne = new Length(1, Unit.FEET);
-        Length lengthTwo = new Length(2, Unit.INCH);
+    public void givenFeetAndInch_WhenAdded_ShouldReturnResult() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.FEET);
+        Convertor lengthTwo = new Convertor(2, Entity.INCH);
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(14,temp,0);
     }
 
     @Test
-    public void givenFeetAndFeet_WhenAdded_ShouldReturnResult() {
-        Length lengthOne = new Length(1, Unit.FEET);
-        Length lengthTwo = new Length(1, Unit.FEET);
+    public void givenFeetAndFeet_WhenAdded_ShouldReturnResult() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.FEET);
+        Convertor lengthTwo = new Convertor(1, Entity.FEET);
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(24,temp,0);
     }
 
     @Test
-    public void givenInchAndCentimeter_WhenAdded_ShouldReturnResult() {
-        Length lengthOne = new Length(2, Unit.INCH);
-        Length lengthTwo = new Length(2.5, Unit.CENTIMETER);
+    public void givenInchAndCentimeter_WhenAdded_ShouldReturnResult() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(2, Entity.INCH);
+        Convertor lengthTwo = new Convertor(2.5, Entity.CENTIMETER);
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(3,temp,0);
     }
 
     @Test
-    public void givenGallonAndLiter_WhenAdded_ShouldReturnResult() {
-        Length lengthOne = new Length(1, Unit.GALLON);
-        Length lengthTwo = new Length(3.78, Unit.LITRE);
+    public void givenGallonAndLiter_WhenAdded_ShouldReturnResult() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.GALLON);
+        Convertor lengthTwo = new Convertor(3.78, Entity.LITRE);
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(7.56,temp,0);
     }
 
     @Test
-    public void givenLiterAndMiliLiter_WhenAdded_ShouldReturnResult() {
-        Length lengthOne = new Length(1, Unit.LITRE);
-        Length lengthTwo = new Length(1000, Unit.MILILITER);
+    public void givenLiterAndMiliLiter_WhenAdded_ShouldReturnResult() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.LITRE);
+        Convertor lengthTwo = new Convertor(1000, Entity.MILLILITER);
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(2,temp,0);
     }
 
     @Test
-    public void givenTonneAndGram_WhenAdded_ShouldReturnResult() {
-        Length lengthOne = new Length(1, Unit.TONNE);
-        Length lengthTwo = new Length(1000, Unit.GRAM);
+    public void givenTonneAndGram_WhenAdded_ShouldReturnResult() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.TONNE);
+        Convertor lengthTwo = new Convertor(1000, Entity.GRAM);
         double temp = quantityMeasurement.addition(lengthOne, lengthTwo);
         Assert.assertEquals(1001,temp,0);
     }
 
     @Test
-    public void givenKilogramAndGram_ShouldReturnResult() {
-        Length lengthOne = new Length(1, Unit.KILOGRAM);
-        Length lengthTwo = new Length(1000, Unit.GRAM);
+    public void givenKilogramAndGram_ShouldReturnResult() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(1, Entity.KILOGRAM);
+        Convertor lengthTwo = new Convertor(1000, Entity.GRAM);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
     @Test
-    public void givenFahrenheitAndCelcius_ShouldReturnTrue() {
-        Length lengthOne = new Length(2.12, Unit.FAHRENHEIT);
-        Length lengthTwo = new Length(1, Unit.CELCIUS);
+    public void givenFahrenheitAndCelsius_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(212, Entity.FAHRENHEIT);
+        Convertor lengthTwo = new Convertor(100, Entity.CELSIUS);
         boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
         Assert.assertTrue(temp);
     }
 
+    @Test
+    public void givenCelsiusAndFahrenheit_ShouldReturnTrue() throws QuantityMeasurementException {
+        Convertor lengthOne = new Convertor(0, Entity.CELSIUS);
+        Convertor lengthTwo = new Convertor(32, Entity.FAHRENHEIT);
+        boolean temp = quantityMeasurement.compare(lengthOne, lengthTwo);
+        Assert.assertTrue(temp);
+    }
+
+    @Test
+    public void givenCelsiusAndFahrenheit_WhenAdded_ShouldReturnResult() {
+        Convertor lengthOne = new Convertor(0, Entity.CELSIUS);
+        Convertor lengthTwo = new Convertor(32, Entity.FAHRENHEIT);
+        try {
+            quantityMeasurement.addition(lengthOne, lengthTwo);
+        } catch (QuantityMeasurementException e) {
+            Assert.assertEquals(e.type, QuantityMeasurementException.Exception.NOT_POSSIBLE_EXCEPTION);
+        }
+
+    }
+
+    @Test
+    public void givenKilogramAndInch_ShouldReturnTrue() {
+        Convertor lengthOne = new Convertor(1, Entity.KILOGRAM);
+        Convertor lengthTwo = new Convertor(1, Entity.INCH);
+        try {
+            quantityMeasurement.compare(lengthOne, lengthTwo);
+        } catch (QuantityMeasurementException e) {
+            Assert.assertEquals(e.type,QuantityMeasurementException.Exception.NOT_POSSIBLE_EXCEPTION);
+        }
+    }
+
+    @Test
+    public void givenKilogramAndLitre_ShouldReturnTrue() {
+        Convertor lengthOne = new Convertor(1, Entity.KILOGRAM);
+        Convertor lengthTwo = new Convertor(1, Entity.LITRE);
+        try {
+            quantityMeasurement.compare(lengthOne, lengthTwo);
+        } catch (QuantityMeasurementException e) {
+            Assert.assertEquals(e.type,QuantityMeasurementException.Exception.NOT_POSSIBLE_EXCEPTION);
+        }
+    }
+
+    @Test
+    public void givenKilogramAndNull_WhenAdded_ShouldReturnResult() {
+        Convertor lengthOne = new Convertor(1, Entity.KILOGRAM);
+        Convertor lengthTwo = null;
+        try {
+            quantityMeasurement.compare(lengthOne, lengthTwo);
+        } catch (QuantityMeasurementException e) {
+            Assert.assertEquals(e.type,QuantityMeasurementException.Exception.NULL_EXCEPTION);
+        }
+    }
+
+    @Test
+    public void givenNullAndKilograml_WhenAdded_ShouldReturnResult() {
+        Convertor lengthOne = null;
+        Convertor lengthTwo = new Convertor(1, Entity.KILOGRAM);
+        try {
+            quantityMeasurement.compare(lengthOne, lengthTwo);
+        } catch (QuantityMeasurementException e) {
+            Assert.assertEquals(e.type,QuantityMeasurementException.Exception.NULL_EXCEPTION);
+        }
+    }
+
+    @Test
+    public void givenKilogramAndLitre_WhenAdded_ShouldReturnResult() {
+        Convertor lengthOne = new Convertor(1, Entity.KILOGRAM);
+        Convertor lengthTwo = new Convertor(1, Entity.LITRE);
+        try {
+            quantityMeasurement.addition(lengthOne, lengthTwo);
+        } catch (QuantityMeasurementException e) {
+            Assert.assertEquals(e.type,QuantityMeasurementException.Exception.NOT_POSSIBLE_EXCEPTION);
+        }
+    }
 }
