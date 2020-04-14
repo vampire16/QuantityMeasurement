@@ -1,14 +1,20 @@
 public class QuantityMeasurement {
 
-    public static void main(String[] args){
-        System.out.println("Welcome");
+    public boolean compare(Convertor firstValue, Convertor secondValue) throws QuantityMeasurementException {
+        if (firstValue == null || secondValue == null)
+            throw new QuantityMeasurementException(QuantityMeasurementException.Exception.NULL_EXCEPTION);
+        else if (firstValue.entityType != secondValue.entityType)
+            throw new QuantityMeasurementException(QuantityMeasurementException.Exception.NOT_POSSIBLE_EXCEPTION);
+        return firstValue.equals(secondValue);
     }
 
-    public boolean compare(Length lengthOne, Length lengthTwo){
-        return lengthOne.equals(lengthTwo);
-    }
-
-    public double addition(Length lengthOne, Length lengthTwo) {
-        return lengthOne.getLength()+lengthTwo.getLength();
+    public double addition(Convertor firstValue, Convertor secondValue) throws QuantityMeasurementException {
+        if (firstValue == null || secondValue == null)
+            throw new QuantityMeasurementException(QuantityMeasurementException.Exception.NULL_EXCEPTION);
+        else if (firstValue.entityType != secondValue.entityType)
+            throw new QuantityMeasurementException(QuantityMeasurementException.Exception.NOT_POSSIBLE_EXCEPTION);
+        else if (firstValue.entityType == EntityType.TEMPERATURE)
+            throw new QuantityMeasurementException(QuantityMeasurementException.Exception.NOT_POSSIBLE_EXCEPTION);
+        return firstValue.getValue()+secondValue.getValue();
     }
 }
