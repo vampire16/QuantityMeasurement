@@ -1,22 +1,23 @@
-import java.util.Objects;
+public class Convertor {
 
-public class Length {
+    private double value;
+    public EntityType entityType;
 
-    private double length;
-    private Unit unit;
-
-    public Length(double length, Unit unit) {
-        this.length = length * unit.getLength();
-        this.unit = unit;
+    public Convertor(double value, Entity entity) {
+        if (entity.entityType == EntityType.TEMPERATURE)
+            this.value = (entity == Entity.FAHRENHEIT) ? (value - 32) * 5 / 9 : value;
+        else
+            this.value = value * entity.getValue();
+        this.entityType = entity.entityType;
     }
 
-    public double getLength() { return length; }
+    public double getValue() { return value; }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Length length1 = (Length) o;
-        return Double.compare(length1.length, length) == 0;
+        Convertor value1 = (Convertor) o;
+        return Double.compare(value1.value, value) == 0;
     }
 }
