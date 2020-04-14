@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
-
 public enum EntityType {
+    LENGTH,TEMPERATURE,VOLUME,WEIGHT
 }
