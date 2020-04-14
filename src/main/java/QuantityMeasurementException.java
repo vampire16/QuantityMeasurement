@@ -1,4 +1,12 @@
-package PACKAGE_NAME;
+public class QuantityMeasurementException extends Exception{
+   enum Exception {
+       NULL_EXCEPTION,
+       NOT_POSSIBLE_EXCEPTION
+   }
 
-public class QuantityMeasurementException {
+   Exception type;
+
+    public QuantityMeasurementException(Exception type) {
+        this.type = type;
+    }
 }
